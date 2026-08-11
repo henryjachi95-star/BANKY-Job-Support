@@ -1,435 +1,528 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="BANKY SUPER SUPPORT - Professional CV, Job Application, Online Work and Career Guidance">
-<title>BANKY SUPER SUPPORT</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>BANKY Job Support | Jobs, CV & Career Support</title>  <meta name="description" content="BANKY Job Support helps job seekers with job opportunities, CV support, applications and career guidance.">
+  <meta name="keywords" content="BANKY Job Support, jobs, CV, career support, job applications, Nigeria jobs">
+  <meta name="author" content="BANKY Job Support">  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;background:#f5f8fc;color:#111827;line-height:1.6}
-header{background:#050b18;color:white;padding:15px 6%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000}
-.logo{font-size:21px;font-weight:bold;color:#2196ff}
-nav{display:flex;gap:18px}
-nav a{color:white;text-decoration:none;font-size:14px}
-nav a:hover{color:#2196ff}
-.menu{display:none;font-size:28px;cursor:pointer}
+    body {
+      background: #f5f7fb;
+      color: #172033;
+      line-height: 1.6;
+    }
 
-.hero{
-min-height:90vh;background:linear-gradient(135deg,#050b18,#063b73);
-color:white;display:flex;align-items:center;justify-content:center;
-text-align:center;padding:60px 20px
-}
-.profile{width:150px;height:150px;border-radius:50%;object-fit:cover;border:5px solid #2196ff;margin-bottom:20px;background:white}
-.hero h1{font-size:46px;margin-bottom:12px}
-.hero h2{color:#4db3ff;margin-bottom:15px}
-.hero p{max-width:720px;margin:auto;color:#dbeafe}
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #071a3d, #0b4dbb);
+      color: white;
+      padding: 18px 7%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+    }
 
-.buttons{margin-top:28px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;padding:13px 22px;border-radius:8px;text-decoration:none;font-weight:bold;border:none;cursor:pointer;transition:.3s}
-.btn-blue{background:#168cff;color:white}
-.btn-blue:hover{background:#006dcc;transform:translateY(-2px)}
-.btn-dark{background:#06142d;color:white}
-.btn-green{background:#25D366;color:white}
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-section{padding:75px 7%}
-.section-title{text-align:center;margin-bottom:40px}
-.section-title h2{font-size:34px;color:#06142d}
-.section-title p{color:#64748b}
+    .logo {
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
 
-.services{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}
-.card{background:white;padding:30px;border-radius:15px;box-shadow:0 8px 25px rgba(0,0,0,.08);border-top:4px solid #168cff}
-.card .icon{font-size:40px}
-.card h3{margin:10px 0;color:#06142d}
-.card p{color:#64748b}
-.price{font-size:24px;font-weight:bold;color:#087bea;margin:15px 0}
+    .logo span {
+      color: #ffd43b;
+    }
 
-.about{background:#06142d;color:white;text-align:center}
-.about p{max-width:800px;margin:auto;color:#dbeafe}
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 22px;
+      font-weight: bold;
+    }
 
-.why{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.why-box{background:white;padding:25px;text-align:center;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,.07)}
-.why-box strong{display:block;font-size:20px;margin-bottom:8px}
+    nav a:hover {
+      color: #ffd43b;
+    }
 
-.payment{background:linear-gradient(135deg,#06142d,#0b4f8a);color:white}
-.payment-box{max-width:650px;margin:auto;background:white;color:#111827;padding:35px;border-radius:15px;box-shadow:0 10px 35px rgba(0,0,0,.2)}
-.bank-detail{background:#eef6ff;padding:20px;border-left:5px solid #168cff;border-radius:8px;margin:20px 0}
+    /* HERO */
+    .hero {
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 7%;
+      color: white;
+      background:
+        linear-gradient(rgba(3,18,50,0.86), rgba(4,55,125,0.90)),
+        radial-gradient(circle at top, #2879e8, #061b42);
+    }
 
-.social{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin-top:25px}
+    .hero-content {
+      max-width: 850px;
+    }
 
-footer{background:#030712;color:white;text-align:center;padding:30px 15px}
-footer p{color:#94a3b8}
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 9px 18px;
+      border-radius: 30px;
+      margin-bottom: 22px;
+      font-weight: bold;
+    }
 
-.whatsapp{
-position:fixed;right:20px;bottom:20px;width:58px;height:58px;
-background:#25D366;color:white;border-radius:50%;
-display:flex;align-items:center;justify-content:center;
-font-size:28px;text-decoration:none;box-shadow:0 5px 20px rgba(0,0,0,.25);z-index:999
-}
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 75px);
+      line-height: 1.05;
+      margin-bottom: 22px;
+    }
 
-.modal{display:none;position:fixed;z-index:2000;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,.7);padding:20px}
-.modal-content{background:white;max-width:550px;margin:7% auto;padding:30px;border-radius:15px;position:relative}
-.close{position:absolute;right:20px;top:10px;font-size:30px;cursor:pointer}
-.modal-content h2{color:#06142d}
-.modal-content ul{margin:20px}
+    .hero h1 span {
+      color: #ffd43b;
+    }
 
-@media(max-width:800px){
-nav{display:none;position:absolute;top:65px;left:0;width:100%;background:#050b18;flex-direction:column;padding:20px}
-nav.show{display:flex}
-.menu{display:block}
-.hero h1{font-size:34px}
-.services{grid-template-columns:1fr}
-.why{grid-template-columns:1fr}
-section{padding:55px 5%}
-}
-</style>
-</head>
+    .hero p {
+      font-size: 20px;
+      max-width: 700px;
+      margin: auto;
+      opacity: 0.95;
+    }
 
-<body>
+    .buttons {
+      margin-top: 35px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
 
-<header>
-<div class="logo">BANKY SUPER SUPPORT</div>
-<div class="menu" onclick="toggleMenu()">☰</div>
+    .btn {
+      display: inline-block;
+      padding: 15px 27px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
 
-<nav id="nav">
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#about">About</a>
-<a href="#why">Why Us</a>
-<a href="#contact">Contact</a>
-<a href="#payment">Payment</a>
+    .btn-primary {
+      background: #ffd43b;
+      color: #071a3d;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      background: white;
+    }
+
+    .btn-whatsapp {
+      background: #25D366;
+      color: white;
+    }
+
+    .btn-whatsapp:hover {
+      transform: translateY(-3px);
+      background: #1da851;
+    }
+
+    /* GENERAL */
+    section {
+      padding: 80px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 45px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      color: #071a3d;
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: #667085;
+    }
+
+    /* SERVICES */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 8px 30px rgba(20,45,90,0.08);
+      border: 1px solid #e8edf5;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(20,45,90,0.14);
+    }
+
+    .icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #eaf2ff;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #071a3d;
+    }
+
+    .card p {
+      color: #667085;
+    }
+
+    /* HOW IT WORKS */
+    .steps {
+      background: #eef4ff;
+    }
+
+    .step-container {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
+
+    .step {
+      background: white;
+      padding: 28px;
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    .number {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 15px;
+      background: #0b4dbb;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    /* CTA */
+    .cta {
+      background: linear-gradient(135deg, #071a3d, #0b4dbb);
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 650px;
+      margin: auto;
+      opacity: 0.9;
+    }
+
+    /* SOCIAL */
+    .social {
+      text-align: center;
+      background: white;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .social-btn {
+      padding: 14px 23px;
+      border-radius: 10px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .tiktok {
+      background: #000;
+    }
+
+    .instagram {
+      background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+    }
+
+    .whatsapp {
+      background: #25D366;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #050f24;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 35px 7%;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    /* MOBILE */
+    @media (max-width: 700px) {
+      nav a {
+        display: none;
+      }
+
+      .hero {
+        min-height: 580px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      section {
+        padding: 60px 5%;
+      }
+
+      .section-title h2 {
+        font-size: 31px;
+      }
+
+      .cta h2 {
+        font-size: 32px;
+      }
+    }
+  </style></head><body>  <!-- HEADER -->  <header>
+    <nav>
+      <div class="logo">BANKY<span> JOB SUPPORT</span></div>  <div>
+    <a href="#services">Services</a>
+    <a href="#how">How It Works</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
-</header>
 
-<section class="hero" id="home">
-<div>
+  </header>  <!-- HERO -->  <section class="hero">
+    <div class="hero-content">  <div class="badge">🚀 Your Job Search Starts Here</div>
 
-<!-- CHANGE THIS IMAGE URL TO YOUR PROFILE PICTURE -->
-<img class="profile"
-src="https://via.placeholder.com/150"
-alt="BANKY Profile Picture">
+  <h1>
+    Get Ready.<br>
+    Get <span>Hired.</span>
+  </h1>
 
-<h1>BANKY SUPER SUPPORT</h1>
+  <p>
+    BANKY Job Support helps job seekers find opportunities,
+    improve their CVs, complete applications and get practical
+    support on their journey to employment.
+  </p>
 
-<h2>Your Career. Your Opportunity. Our Support.</h2>
+  <div class="buttons">
+    <a class="btn btn-whatsapp"
+       href="https://wa.me/2348124513670"
+       target="_blank">
+      💬 Chat on WhatsApp
+    </a>
 
-<p>
-Professional support for CV creation, job applications,
-online work guidance and career development. We help you
-present yourself professionally and apply with confidence.
-</p>
+    <a class="btn btn-primary" href="#services">
+      Explore Our Services
+    </a>
+  </div>
 
-<div class="buttons">
-<a class="btn btn-blue" href="#services">Explore Services</a>
-
-<a class="btn btn-green"
-href="https://wa.me/2348124513670?text=Hello%20BANKY%20SUPER%20SUPPORT,%20I%20want%20to%20make%20an%20inquiry."
-target="_blank">💬 WhatsApp</a>
 </div>
 
-</div>
-</section>
-
-
-<section id="services">
-
-<div class="section-title">
-<h2>Our Services</h2>
-<p>Choose a service to see what is included and the price.</p>
+  </section>  <!-- SERVICES -->  <section id="services"><div class="section-title">
+  <h2>What We Can Help You With</h2>
+  <p>
+    Simple and practical support for people looking for jobs
+    and better career opportunities.
+  </p>
 </div>
 
 <div class="services">
 
-<div class="card">
-<div class="icon">📄</div>
-<h3>CV Support</h3>
-<p>Professional CV creation, redesign, formatting and job-focused improvement.</p>
-<div class="price">₦5,000</div>
-<button class="btn btn-blue" onclick="openService('CV Support','₦5,000')">
-View & Order
-</button>
+  <div class="card">
+    <div class="icon">💼</div>
+    <h3>Job Opportunities</h3>
+    <p>
+      Get information about available job opportunities
+      and learn how to apply properly.
+    </p>
+  </div>
+
+  <div class="card">
+    <div class="icon">📄</div>
+    <h3>CV Support</h3>
+    <p>
+      Get help improving your CV so it presents your skills
+      and experience professionally.
+    </p>
+  </div>
+
+  <div class="card">
+    <div class="icon">📝</div>
+    <h3>Application Support</h3>
+    <p>
+      Get guidance with online job applications and
+      understand what information employers need.
+    </p>
+  </div>
+
+  <div class="card">
+    <div class="icon">🎯</div>
+    <h3>Career Guidance</h3>
+    <p>
+      Get practical guidance on choosing suitable job
+      opportunities and preparing for employment.
+    </p>
+  </div>
+
+  <div class="card">
+    <div class="icon">💻</div>
+    <h3>Remote Job Support</h3>
+    <p>
+      Learn about remote work opportunities and how to
+      position yourself for online jobs.
+    </p>
+  </div>
+
+  <div class="card">
+    <div class="icon">⭐</div>
+    <h3>Personal Support</h3>
+    <p>
+      Get direct support and answers to questions about
+      your job-search journey.
+    </p>
+  </div>
+
 </div>
 
-<div class="card">
-<div class="icon">💼</div>
-<h3>Job Application Support</h3>
-<p>Assistance with preparing and completing job applications professionally.</p>
-<div class="price">₦3,000</div>
-<button class="btn btn-blue" onclick="openService('Job Application Support','₦3,000')">
-View & Order
-</button>
+  </section>  <!-- HOW IT WORKS -->  <section class="steps" id="how"><div class="section-title">
+  <h2>How It Works</h2>
+  <p>Getting started is simple.</p>
 </div>
 
-<div class="card">
-<div class="icon">💻</div>
-<h3>Online Work Support</h3>
-<p>Beginner-friendly guidance for finding and applying for legitimate online work opportunities.</p>
-<div class="price">₦5,000</div>
-<button class="btn btn-blue" onclick="openService('Online Work Support','₦5,000')">
-View & Order
-</button>
+<div class="step-container">
+
+  <div class="step">
+    <div class="number">1</div>
+    <h3>Contact Us</h3>
+    <p>
+      Send us a message on WhatsApp and tell us what
+      kind of job support you need.
+    </p>
+  </div>
+
+  <div class="step">
+    <div class="number">2</div>
+    <h3>Tell Us Your Goal</h3>
+    <p>
+      Explain what you are looking for and the type of
+      work you are interested in.
+    </p>
+  </div>
+
+  <div class="step">
+    <div class="number">3</div>
+    <h3>Get Support</h3>
+    <p>
+      Receive practical guidance and support based on
+      your needs.
+    </p>
+  </div>
+
 </div>
 
-<div class="card">
-<div class="icon">🎯</div>
-<h3>Career Guidance</h3>
-<p>Practical guidance to help you understand your options and plan your next career step.</p>
-<div class="price">₦3,000</div>
-<button class="btn btn-blue" onclick="openService('Career Guidance','₦3,000')">
-View & Order
-</button>
-</div>
-
-<div class="card">
-<div class="icon">⭐</div>
-<h3>CV + Cover Letter Package</h3>
-<p>Professional CV plus a customized cover letter for your job application.</p>
-<div class="price">₦7,000</div>
-<button class="btn btn-blue" onclick="openService('CV + Cover Letter Package','₦7,000')">
-View & Order
-</button>
-</div>
-
-</div>
-</section>
-
-
-<section class="about" id="about">
-
-<div class="section-title">
-<h2 style="color:white">About BANKY SUPER SUPPORT</h2>
-</div>
+  </section>  <!-- CTA -->  <section class="cta"><h2>Ready to Start Your Job Search?</h2>
 
 <p>
-BANKY SUPER SUPPORT provides practical and affordable support
-for people looking to improve their CVs, apply for jobs,
-explore online work opportunities and make better career decisions.
-</p>
-
-<br>
-
-<p>
-Our goal is to make professional job support easier to understand,
-more accessible and easier to use.
+  Don't wait. Contact BANKY Job Support today and take
+  the next step toward finding the right opportunity.
 </p>
 
 <div class="buttons">
-<a class="btn btn-green"
-href="https://wa.me/2348124513670?text=Hello%20BANKY,%20I%20would%20like%20to%20know%20more%20about%20your%20services."
-target="_blank">Talk to BANKY</a>
-</div>
 
-</section>
-
-
-<section id="why">
-
-<div class="section-title">
-<h2>Why Choose BANKY SUPER SUPPORT?</h2>
-<p>Simple, professional and customer-focused support.</p>
-</div>
-
-<div class="why">
-
-<div class="why-box">
-<strong>✅ Professional</strong>
-<p>We focus on clear and professional presentation.</p>
-</div>
-
-<div class="why-box">
-<strong>💰 Affordable</strong>
-<p>Our services are priced with beginners in mind.</p>
-</div>
-
-<div class="why-box">
-<strong>🎯 Practical</strong>
-<p>Support is focused on real job-search needs.</p>
-</div>
-
-<div class="why-box">
-<strong>📱 Easy Communication</strong>
-<p>Contact BANKY directly through WhatsApp or social media.</p>
-</div>
-
-<div class="why-box">
-<strong>⚡ Fast Response</strong>
-<p>Get clear communication about your request.</p>
-</div>
-
-<div class="why-box">
-<strong>🤝 Customer Focused</strong>
-<p>We understand your needs before providing support.</p>
-</div>
+  <a class="btn btn-whatsapp"
+     href="https://wa.me/2348124513670"
+     target="_blank">
+    💬 Message Us on WhatsApp
+  </a>
 
 </div>
-</section>
 
+  </section>  <!-- SOCIAL MEDIA -->  <section class="social" id="contact"><div class="section-title">
+  <h2>Connect With BANKY</h2>
 
-<section id="contact">
-
-<div class="section-title">
-<h2>Connect With BANKY</h2>
-<p>Follow us, send a DM or contact us directly.</p>
+  <p>
+    Follow us and stay updated with job opportunities,
+    career tips and useful information.
+  </p>
 </div>
 
-<div class="social">
+<div class="social-links">
 
-<a class="btn btn-green"
-href="https://wa.me/2348124513670"
-target="_blank">💬 WhatsApp</a>
+  <a class="social-btn tiktok"
+     href="https://www.tiktok.com/@.rt2200"
+     target="_blank">
+    🎵 TikTok
+  </a>
 
-<a class="btn btn-blue"
-href="https://www.tiktok.com/@.rt2200"
-target="_blank">🎵 TikTok</a>
+  <a class="social-btn instagram"
+     href="https://www.instagram.com/bankyjobsupport"
+     target="_blank">
+    📸 Instagram
+  </a>
 
-<a class="btn btn-blue"
-href="https://www.instagram.com/bankyjobsupport"
-target="_blank">📸 Instagram</a>
+  <a class="social-btn whatsapp"
+     href="https://wa.me/2348124513670"
+     target="_blank">
+    💬 WhatsApp
+  </a>
 
 </div>
-</section>
 
-
-<section class="payment" id="payment">
-
-<div class="section-title">
-<h2 style="color:white">💳 Payment</h2>
-<p style="color:#dbeafe">
-Choose your service and confirm the price before payment.
+  </section>  <!-- FOOTER -->  <footer><p>
+  © 2026 <strong>BANKY Job Support</strong>.
+  All Rights Reserved.
 </p>
-</div>
-
-<div class="payment-box">
-
-<h2>Payment Information</h2>
-
-<p>Please contact BANKY first to confirm your order and amount.</p>
-
-<div class="bank-detail">
-
-<p><strong>Bank:</strong> Zenith Bank</p>
-<p><strong>Account Number:</strong> 4318343679</p>
-<p><strong>Account Name:</strong> NWAfor Jachi Henry</p>
-
-</div>
-
-<h3>After Payment</h3>
-
-<ol>
-<li>Make your payment.</li>
-<li>Take a screenshot of your receipt.</li>
-<li>Click "Send Payment Proof".</li>
-<li>Send the receipt and your selected service on WhatsApp.</li>
-</ol>
-
-<br>
-
-<a class="btn btn-green"
-href="https://wa.me/2348124513670?text=Hello%20BANKY%20SUPER%20SUPPORT,%20I%20have%20made%20payment.%20My%20service%20is%3A%20"
-target="_blank">
-📲 Send Payment Proof
-</a>
-
-</div>
-</section>
-
-
-<footer>
-
-<h2>BANKY SUPER SUPPORT</h2>
-<p>Your Career. Your Opportunity. Our Support.</p>
-<br>
-<p>© 2026 BANKY SUPER SUPPORT. All Rights Reserved.</p>
-
-</footer>
-
-
-<a class="whatsapp"
-href="https://wa.me/2348124513670?text=Hello%20BANKY%20SUPER%20SUPPORT,%20I%20need%20help."
-target="_blank">💬</a>
-
-
-<div class="modal" id="serviceModal">
-
-<div class="modal-content">
-
-<span class="close" onclick="closeService()">×</span>
-
-<h2 id="serviceTitle"></h2>
-
-<br>
 
 <p>
-<strong>What you get:</strong>
+  Jobs • CV Support • Applications • Career Guidance
 </p>
 
-<ul>
-<li>Professional assistance</li>
-<li>Clear communication</li>
-<li>Personal support</li>
-<li>Service delivered according to your request</li>
-</ul>
-
-<p>
-<strong>Service Price:</strong>
-<span id="servicePrice"></span>
-</p>
-
-<br>
-
-<a id="orderButton"
-class="btn btn-green"
-target="_blank">
-💬 Order on WhatsApp
-</a>
-
-<a class="btn btn-blue" href="#payment" onclick="closeService()">
-💳 Go to Payment
-</a>
-
-</div>
-</div>
-
-
-<script>
-
-function toggleMenu(){
-document.getElementById("nav").classList.toggle("show");
-}
-
-function openService(service,price){
-
-document.getElementById("serviceTitle").innerText=service;
-document.getElementById("servicePrice").innerText=price;
-
-let message =
-"Hello BANKY SUPER SUPPORT,%0A%0A"+
-"I want to order: "+service+"%0A"+
-"Price: "+price+"%0A%0A"+
-"Please tell me the next step.";
-
-document.getElementById("orderButton").href=
-"https://wa.me/2348124513670?text="+message;
-
-document.getElementById("serviceModal").style.display="block";
-}
-
-function closeService(){
-document.getElementById("serviceModal").style.display="none";
-}
-
-window.onclick=function(event){
-
-let modal=document.getElementById("serviceModal");
-
-if(event.target===modal){
-modal.style.display="none";
-}
-
-}
-
-</script>
-
-</body>
+  </footer></body>
 </html>
