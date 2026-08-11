@@ -1,528 +1,823 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>BANKY Job Support | Jobs, CV & Career Support</title>  <meta name="description" content="BANKY Job Support helps job seekers with job opportunities, CV support, applications and career guidance.">
-  <meta name="keywords" content="BANKY Job Support, jobs, CV, career support, job applications, Nigeria jobs">
-  <meta name="author" content="BANKY Job Support">  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    body {
-      background: #f5f7fb;
-      color: #172033;
-      line-height: 1.6;
-    }
+    <title>BANKY Job Support | Professional Job & Business Support</title>
 
-    /* HEADER */
-    header {
-      background: linear-gradient(135deg, #071a3d, #0b4dbb);
-      color: white;
-      padding: 18px 7%;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.15);
-    }
+    <meta name="description" content="BANKY Job Support provides professional job application, CV, online work and business support services.">
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: auto;
-    }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-    .logo {
-      font-size: 25px;
-      font-weight: 900;
-      letter-spacing: 1px;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    .logo span {
-      color: #ffd43b;
-    }
+        body {
+            background: #f5f8fc;
+            color: #172033;
+            line-height: 1.6;
+        }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 22px;
-      font-weight: bold;
-    }
+        a {
+            text-decoration: none;
+        }
 
-    nav a:hover {
-      color: #ffd43b;
-    }
+        /* HEADER */
+        header {
+            background: #071b3a;
+            color: white;
+            padding: 15px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
 
-    /* HERO */
-    .hero {
-      min-height: 650px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 80px 7%;
-      color: white;
-      background:
-        linear-gradient(rgba(3,18,50,0.86), rgba(4,55,125,0.90)),
-        radial-gradient(circle at top, #2879e8, #061b42);
-    }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
 
-    .hero-content {
-      max-width: 850px;
-    }
+        .logo {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 3px solid #d9a928;
+        }
 
-    .badge {
-      display: inline-block;
-      background: rgba(255,255,255,0.14);
-      border: 1px solid rgba(255,255,255,0.3);
-      padding: 9px 18px;
-      border-radius: 30px;
-      margin-bottom: 22px;
-      font-weight: bold;
-    }
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-    .hero h1 {
-      font-size: clamp(42px, 7vw, 75px);
-      line-height: 1.05;
-      margin-bottom: 22px;
-    }
+        .brand h2 {
+            font-size: 20px;
+            color: white;
+        }
 
-    .hero h1 span {
-      color: #ffd43b;
-    }
+        .brand span {
+            font-size: 12px;
+            color: #d9a928;
+        }
 
-    .hero p {
-      font-size: 20px;
-      max-width: 700px;
-      margin: auto;
-      opacity: 0.95;
-    }
+        nav {
+            display: flex;
+            gap: 22px;
+            align-items: center;
+        }
 
-    .buttons {
-      margin-top: 35px;
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
+        nav a {
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
 
-    .btn {
-      display: inline-block;
-      padding: 15px 27px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
+        nav a:hover {
+            color: #d9a928;
+        }
 
-    .btn-primary {
-      background: #ffd43b;
-      color: #071a3d;
-    }
+        .menu {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
 
-    .btn-primary:hover {
-      transform: translateY(-3px);
-      background: white;
-    }
+        /* HERO */
+        .hero {
+            min-height: 650px;
+            background:
+                linear-gradient(rgba(7,27,58,0.88), rgba(7,27,58,0.90)),
+                linear-gradient(135deg, #071b3a, #0c3975);
+            display: flex;
+            align-items: center;
+            padding: 70px 6%;
+            color: white;
+        }
 
-    .btn-whatsapp {
-      background: #25D366;
-      color: white;
-    }
+        .hero-content {
+            max-width: 750px;
+            animation: slideUp 1s ease;
+        }
 
-    .btn-whatsapp:hover {
-      transform: translateY(-3px);
-      background: #1da851;
-    }
+        .hero-tag {
+            display: inline-block;
+            background: rgba(217,169,40,0.15);
+            color: #ffd45a;
+            padding: 8px 16px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
 
-    /* GENERAL */
-    section {
-      padding: 80px 7%;
-    }
+        .hero h1 {
+            font-size: clamp(40px, 7vw, 70px);
+            line-height: 1.05;
+            margin-bottom: 20px;
+        }
 
-    .section-title {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 45px;
-    }
+        .hero h1 span {
+            color: #d9a928;
+        }
 
-    .section-title h2 {
-      font-size: 38px;
-      color: #071a3d;
-      margin-bottom: 12px;
-    }
+        .hero p {
+            font-size: 19px;
+            max-width: 650px;
+            color: #e6edf8;
+            margin-bottom: 30px;
+        }
 
-    .section-title p {
-      color: #667085;
-    }
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
 
-    /* SERVICES */
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 25px;
-      max-width: 1200px;
-      margin: auto;
-    }
+        .btn {
+            display: inline-block;
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 18px;
-      box-shadow: 0 8px 30px rgba(20,45,90,0.08);
-      border: 1px solid #e8edf5;
-      transition: 0.3s;
-    }
+        .btn-primary {
+            background: #d9a928;
+            color: #071b3a;
+        }
 
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 35px rgba(20,45,90,0.14);
-    }
+        .btn-primary:hover {
+            background: #ffd45a;
+            transform: translateY(-3px);
+        }
 
-    .icon {
-      width: 58px;
-      height: 58px;
-      border-radius: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #eaf2ff;
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+        }
 
-    .card h3 {
-      margin-bottom: 10px;
-      color: #071a3d;
-    }
+        .btn-outline:hover {
+            background: white;
+            color: #071b3a;
+        }
 
-    .card p {
-      color: #667085;
-    }
+        /* STATS */
+        .stats {
+            margin-top: -45px;
+            position: relative;
+            z-index: 10;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            padding: 0 6%;
+        }
 
-    /* HOW IT WORKS */
-    .steps {
-      background: #eef4ff;
-    }
+        .stat {
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
 
-    .step-container {
-      max-width: 1000px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-    }
+        .stat h2 {
+            color: #0b4c96;
+            font-size: 30px;
+        }
 
-    .step {
-      background: white;
-      padding: 28px;
-      border-radius: 16px;
-      text-align: center;
-    }
+        .stat p {
+            color: #687386;
+        }
 
-    .number {
-      width: 48px;
-      height: 48px;
-      margin: 0 auto 15px;
-      background: #0b4dbb;
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 20px;
-    }
+        /* GENERAL */
+        section {
+            padding: 80px 6%;
+        }
 
-    /* CTA */
-    .cta {
-      background: linear-gradient(135deg, #071a3d, #0b4dbb);
-      color: white;
-      text-align: center;
-    }
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
 
-    .cta h2 {
-      font-size: 42px;
-      margin-bottom: 15px;
-    }
+        .section-title span {
+            color: #d9a928;
+            font-weight: bold;
+        }
 
-    .cta p {
-      max-width: 650px;
-      margin: auto;
-      opacity: 0.9;
-    }
+        .section-title h2 {
+            font-size: 38px;
+            color: #071b3a;
+            margin: 8px 0;
+        }
 
-    /* SOCIAL */
-    .social {
-      text-align: center;
-      background: white;
-    }
+        .section-title p {
+            color: #687386;
+            max-width: 650px;
+            margin: auto;
+        }
 
-    .social-links {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 30px;
-    }
+        /* SERVICES */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
 
-    .social-btn {
-      padding: 14px 23px;
-      border-radius: 10px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+            border: 1px solid #edf0f5;
+            transition: 0.3s;
+        }
 
-    .tiktok {
-      background: #000;
-    }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
 
-    .instagram {
-      background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
-    }
+        .icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 12px;
+            background: #eaf2fc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 27px;
+            margin-bottom: 18px;
+        }
 
-    .whatsapp {
-      background: #25D366;
-    }
+        .service-card h3 {
+            color: #071b3a;
+            margin-bottom: 10px;
+        }
 
-    /* FOOTER */
-    footer {
-      background: #050f24;
-      color: #cbd5e1;
-      text-align: center;
-      padding: 35px 7%;
-    }
+        .service-card p {
+            color: #687386;
+            margin-bottom: 18px;
+        }
 
-    footer strong {
-      color: white;
-    }
+        .learn {
+            color: #0b4c96;
+            font-weight: bold;
+        }
 
-    /* MOBILE */
-    @media (max-width: 700px) {
-      nav a {
-        display: none;
-      }
+        /* WHY US */
+        .why {
+            background: #071b3a;
+            color: white;
+        }
 
-      .hero {
-        min-height: 580px;
-      }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
 
-      .hero p {
-        font-size: 17px;
-      }
+        .why-card {
+            background: rgba(255,255,255,0.08);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.12);
+        }
 
-      section {
-        padding: 60px 5%;
-      }
+        .why-card h3 {
+            color: #ffd45a;
+            margin-bottom: 10px;
+        }
 
-      .section-title h2 {
-        font-size: 31px;
-      }
+        .why-card p {
+            color: #dbe5f3;
+        }
 
-      .cta h2 {
-        font-size: 32px;
-      }
-    }
-  </style></head><body>  <!-- HEADER -->  <header>
-    <nav>
-      <div class="logo">BANKY<span> JOB SUPPORT</span></div>  <div>
-    <a href="#services">Services</a>
-    <a href="#how">How It Works</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
+        /* CTA */
+        .cta {
+            background: linear-gradient(135deg, #0b4c96, #071b3a);
+            color: white;
+            text-align: center;
+        }
 
-  </header>  <!-- HERO -->  <section class="hero">
-    <div class="hero-content">  <div class="badge">🚀 Your Job Search Starts Here</div>
+        .cta h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
 
-  <h1>
-    Get Ready.<br>
-    Get <span>Hired.</span>
-  </h1>
+        .cta p {
+            max-width: 650px;
+            margin: 0 auto 25px;
+            color: #dbe5f3;
+        }
 
-  <p>
-    BANKY Job Support helps job seekers find opportunities,
-    improve their CVs, complete applications and get practical
-    support on their journey to employment.
-  </p>
+        /* FOOTER */
+        footer {
+            background: #041126;
+            color: white;
+            padding: 55px 6% 25px;
+        }
 
-  <div class="buttons">
-    <a class="btn btn-whatsapp"
-       href="https://wa.me/2348124513670"
-       target="_blank">
-      💬 Chat on WhatsApp
-    </a>
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 35px;
+            margin-bottom: 40px;
+        }
 
-    <a class="btn btn-primary" href="#services">
-      Explore Our Services
-    </a>
-  </div>
+        footer h3 {
+            margin-bottom: 15px;
+            color: #ffd45a;
+        }
+
+        footer p {
+            color: #b9c4d4;
+        }
+
+        footer a {
+            display: block;
+            color: #b9c4d4;
+            margin: 8px 0;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            text-align: center;
+            color: #8896aa;
+        }
+
+        /* WHATSAPP */
+        .whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 58px;
+            height: 58px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 27px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+            z-index: 2000;
+        }
+
+        .whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+        /* ANIMATION */
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* MOBILE */
+        @media (max-width: 850px) {
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 85px;
+                left: 0;
+                right: 0;
+                background: #071b3a;
+                flex-direction: column;
+                padding: 25px;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            .menu {
+                display: block;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .services,
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .hero {
+                min-height: 580px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .stats {
+                grid-template-columns: 1fr 1fr;
+                padding: 0 4%;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo-area">
+
+        <div class="logo">
+            <!-- YOUR BANKY LOGO WILL GO HERE -->
+            <img src="banky-logo.png" alt="BANKY Job Support Logo">
+        </div>
+
+        <div class="brand">
+            <h2>BANKY JOB SUPPORT</h2>
+            <span>Professional Support Services</span>
+        </div>
+
+    </div>
+
+    <div class="menu" onclick="toggleMenu()">☰</div>
+
+    <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-tag">
+            🏢 PROFESSIONAL SUPPORT SERVICES
+        </div>
+
+        <h1>
+            Build Your <span>Future</span> With BANKY
+        </h1>
+
+        <p>
+            Professional job application, CV, online work and business
+            support services designed to help you move forward with confidence.
+        </p>
+
+        <div class="buttons">
+
+            <a href="services.html" class="btn btn-primary">
+                Explore Our Services →
+            </a>
+
+            <a href="contact.html" class="btn btn-outline">
+                Contact Us
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- STATS -->
+
+<div class="stats">
+
+    <div class="stat">
+        <h2>24/7</h2>
+        <p>Support</p>
+    </div>
+
+    <div class="stat">
+        <h2>100%</h2>
+        <p>Professional</p>
+    </div>
+
+    <div class="stat">
+        <h2>Fast</h2>
+        <p>Response</p>
+    </div>
+
+    <div class="stat">
+        <h2>Trusted</h2>
+        <p>Service</p>
+    </div>
 
 </div>
 
-  </section>  <!-- SERVICES -->  <section id="services"><div class="section-title">
-  <h2>What We Can Help You With</h2>
-  <p>
-    Simple and practical support for people looking for jobs
-    and better career opportunities.
-  </p>
-</div>
 
-<div class="services">
+<!-- SERVICES -->
 
-  <div class="card">
-    <div class="icon">💼</div>
-    <h3>Job Opportunities</h3>
+<section>
+
+    <div class="section-title">
+
+        <span>WHAT WE DO</span>
+
+        <h2>Our Professional Services</h2>
+
+        <p>
+            Choose the service you need and learn more about how BANKY
+            Job Support can help you.
+        </p>
+
+    </div>
+
+
+    <div class="services">
+
+        <div class="service-card">
+
+            <div class="icon">📄</div>
+
+            <h3>CV & Resume Support</h3>
+
+            <p>
+                Professional CV and resume assistance designed to present
+                your skills and experience clearly.
+            </p>
+
+            <a href="cv.html" class="learn">
+                View Full Service →
+            </a>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="icon">💼</div>
+
+            <h3>Job Application Support</h3>
+
+            <p>
+                Get assistance with finding suitable opportunities and
+                preparing job applications.
+            </p>
+
+            <a href="job-application.html" class="learn">
+                View Full Service →
+            </a>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="icon">🌐</div>
+
+            <h3>Online Work Support</h3>
+
+            <p>
+                Learn about online work opportunities and receive support
+                getting started.
+            </p>
+
+            <a href="online-work.html" class="learn">
+                View Full Service →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHY BANKY -->
+
+<section class="why">
+
+    <div class="section-title">
+
+        <span>WHY CHOOSE US</span>
+
+        <h2 style="color:white;">Why BANKY Job Support?</h2>
+
+        <p style="color:#dbe5f3;">
+            We focus on providing simple, clear and professional support.
+        </p>
+
+    </div>
+
+
+    <div class="why-grid">
+
+        <div class="why-card">
+
+            <h3>01 — Professional</h3>
+
+            <p>
+                We present your information and services in a clear,
+                organized and professional way.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <h3>02 — Simple</h3>
+
+            <p>
+                Our services are explained in simple language so you can
+                understand what you are paying for.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <h3>03 — Support</h3>
+
+            <p>
+                Contact us when you need assistance and we will guide you
+                through the next steps.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <h2>Ready to Get Started?</h2>
+
     <p>
-      Get information about available job opportunities
-      and learn how to apply properly.
+        Explore our services, check our pricing or contact BANKY Job Support
+        today.
     </p>
-  </div>
 
-  <div class="card">
-    <div class="icon">📄</div>
-    <h3>CV Support</h3>
-    <p>
-      Get help improving your CV so it presents your skills
-      and experience professionally.
-    </p>
-  </div>
+    <div class="buttons" style="justify-content:center;">
 
-  <div class="card">
-    <div class="icon">📝</div>
-    <h3>Application Support</h3>
-    <p>
-      Get guidance with online job applications and
-      understand what information employers need.
-    </p>
-  </div>
+        <a href="pricing.html" class="btn btn-primary">
+            View Pricing
+        </a>
 
-  <div class="card">
-    <div class="icon">🎯</div>
-    <h3>Career Guidance</h3>
-    <p>
-      Get practical guidance on choosing suitable job
-      opportunities and preparing for employment.
-    </p>
-  </div>
+        <a href="contact.html" class="btn btn-outline">
+            Contact Us
+        </a>
 
-  <div class="card">
-    <div class="icon">💻</div>
-    <h3>Remote Job Support</h3>
-    <p>
-      Learn about remote work opportunities and how to
-      position yourself for online jobs.
-    </p>
-  </div>
+    </div>
 
-  <div class="card">
-    <div class="icon">⭐</div>
-    <h3>Personal Support</h3>
-    <p>
-      Get direct support and answers to questions about
-      your job-search journey.
-    </p>
-  </div>
+</section>
 
-</div>
 
-  </section>  <!-- HOW IT WORKS -->  <section class="steps" id="how"><div class="section-title">
-  <h2>How It Works</h2>
-  <p>Getting started is simple.</p>
-</div>
+<!-- FOOTER -->
 
-<div class="step-container">
+<footer>
 
-  <div class="step">
-    <div class="number">1</div>
-    <h3>Contact Us</h3>
-    <p>
-      Send us a message on WhatsApp and tell us what
-      kind of job support you need.
-    </p>
-  </div>
+    <div class="footer-grid">
 
-  <div class="step">
-    <div class="number">2</div>
-    <h3>Tell Us Your Goal</h3>
-    <p>
-      Explain what you are looking for and the type of
-      work you are interested in.
-    </p>
-  </div>
+        <div>
 
-  <div class="step">
-    <div class="number">3</div>
-    <h3>Get Support</h3>
-    <p>
-      Receive practical guidance and support based on
-      your needs.
-    </p>
-  </div>
+            <h3>BANKY JOB SUPPORT</h3>
 
-</div>
+            <p>
+                Professional job, CV, online work and business support
+                services.
+            </p>
 
-  </section>  <!-- CTA -->  <section class="cta"><h2>Ready to Start Your Job Search?</h2>
+        </div>
 
-<p>
-  Don't wait. Contact BANKY Job Support today and take
-  the next step toward finding the right opportunity.
-</p>
 
-<div class="buttons">
+        <div>
 
-  <a class="btn btn-whatsapp"
-     href="https://wa.me/2348124513670"
-     target="_blank">
-    💬 Message Us on WhatsApp
-  </a>
+            <h3>Quick Links</h3>
 
-</div>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="jobs.html">Jobs</a>
 
-  </section>  <!-- SOCIAL MEDIA -->  <section class="social" id="contact"><div class="section-title">
-  <h2>Connect With BANKY</h2>
+        </div>
 
-  <p>
-    Follow us and stay updated with job opportunities,
-    career tips and useful information.
-  </p>
-</div>
 
-<div class="social-links">
+        <div>
 
-  <a class="social-btn tiktok"
-     href="https://www.tiktok.com/@.rt2200"
-     target="_blank">
-    🎵 TikTok
-  </a>
+            <h3>Company</h3>
 
-  <a class="social-btn instagram"
-     href="https://www.instagram.com/bankyjobsupport"
-     target="_blank">
-    📸 Instagram
-  </a>
+            <a href="about.html">About Us</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
 
-  <a class="social-btn whatsapp"
-     href="https://wa.me/2348124513670"
-     target="_blank">
-    💬 WhatsApp
-  </a>
+        </div>
 
-</div>
 
-  </section>  <!-- FOOTER -->  <footer><p>
-  © 2026 <strong>BANKY Job Support</strong>.
-  All Rights Reserved.
-</p>
+        <div>
 
-<p>
-  Jobs • CV Support • Applications • Career Guidance
-</p>
+            <h3>Follow Us</h3>
 
-  </footer></body>
+            <a href="https://www.tiktok.com/@.rt2200" target="_blank">
+                🎵 TikTok
+            </a>
+
+            <a href="https://www.instagram.com/bankyjobsupport/" target="_blank">
+                📸 Instagram
+            </a>
+
+            <a href="https://wa.me/2348124513670" target="_blank">
+                📱 WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+        © 2026 BANKY Job Support. All Rights Reserved.
+    </div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/2348124513670"
+    target="_blank"
+    title="Chat with BANKY on WhatsApp">
+    ☎
+</a>
+
+
+<script>
+
+function toggleMenu() {
+
+    const nav = document.getElementById("nav");
+
+    nav.classList.toggle("active");
+
+}
+
+</script>
+
+</body>
 </html>
